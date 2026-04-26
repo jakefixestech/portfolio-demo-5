@@ -56,7 +56,6 @@ import '../styles/global.css';
       <!-- Logo Badge -->
       <a href="/" class="flex items-center gap-3 group" aria-label="Granite Ridge County Sheriff's Office Home">
         <svg class="w-12 h-12 text-gold transition-transform group-hover:scale-105" viewBox="0 0 80 80" fill="none" aria-hidden="true">
-          <!-- Six-point sheriff star badge -->
           <polygon points="40,4 48,28 76,28 54,44 62,72 40,56 18,72 26,44 4,28 32,28" fill="currentColor" stroke="#0a0e1a" stroke-width="2"/>
           <circle cx="40" cy="40" r="16" fill="#0f1d3d" stroke="currentColor" stroke-width="2"/>
           <text x="40" y="44" text-anchor="middle" fill="currentColor" font-size="10" font-weight="bold" font-family="Inter, sans-serif">GRCSO</text>
@@ -79,15 +78,13 @@ import '../styles/global.css';
 
       <!-- CTA + Mobile Menu -->
       <div class="flex items-center gap-4">
-        <a href="#report" class="hidden sm:inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-base font-semibold px-5 py-2.5 rounded-lg transition-all hover:shadow-lg hover:shadow-accent/20">
-          <!-- Fingerprint icon -->
+        <a href="#contact" class="hidden sm:inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-base font-semibold px-5 py-2.5 rounded-lg transition-all hover:shadow-lg hover:shadow-accent/20">
           <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M12 11c0 3.5-1 6.5-3 9M12 11c0-1.5-.5-3-2-4s-3.5-1-5 0M12 11c0-1.5.5-3 2-4s3.5-1 5 0M7 17c0 2 .5 3.5 1.5 5M17 17c0 2-.5 3.5-1.5 5M12 2v2M12 6c-3.5 0-6 2.5-6 5M12 6c3.5 0 6 2.5 6 5"/>
           </svg>
           File a Report
         </a>
         
-        <!-- Mobile Menu Button -->
         <button class="lg:hidden p-2 text-muted hover:text-primary transition-colors" aria-label="Open menu" id="mobile-menu-btn">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M4 6h16M4 12h16M4 18h16"/>
@@ -106,7 +103,7 @@ import '../styles/global.css';
         <li><a href="#recruitment" class="block text-muted hover:text-primary transition-colors font-medium">Recruitment</a></li>
         <li><a href="#contact" class="block text-muted hover:text-primary transition-colors font-medium">Contact</a></li>
         <li class="pt-4">
-          <a href="#report" class="inline-flex items-center gap-2 bg-accent text-base font-semibold px-5 py-2.5 rounded-lg">
+          <a href="#contact" class="inline-flex items-center gap-2 bg-accent text-base font-semibold px-5 py-2.5 rounded-lg">
             File a Report
           </a>
         </li>
@@ -117,7 +114,6 @@ import '../styles/global.css';
   <main>
     <!-- HERO SECTION -->
     <section class="relative min-h-screen flex items-center overflow-hidden" id="about">
-      <!-- Video Background -->
       <div class="absolute inset-0">
         <video 
           autoplay 
@@ -134,22 +130,18 @@ import '../styles/global.css';
 
       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-40">
         <div class="max-w-3xl">
-          <!-- Eyebrow -->
-          <p class="font-mono text-accent text-sm tracking-[0.3em] mb-6">
+          <p class="font-mono text-accent text-sm tracking-[0.3em] mb-6 eyebrow-text">
             EST. 1847 • 14 TOWNS • 487 SQUARE MILES
           </p>
           
-          <!-- Headline -->
           <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl text-primary leading-none mb-6">
             SERVING GRANITE<br/>RIDGE COUNTY
           </h1>
           
-          <!-- Subhead -->
           <p class="text-lg sm:text-xl text-muted max-w-2xl mb-10 leading-relaxed">
             A modern sheriff's office committed to transparency, community, and the safety of every resident across New Hampshire's North Country.
           </p>
           
-          <!-- CTAs -->
           <div class="flex flex-wrap gap-4">
             <a href="#dashboard" class="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-base font-semibold px-6 py-3 rounded-lg transition-all hover:shadow-xl hover:shadow-accent/20">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -160,7 +152,7 @@ import '../styles/global.css';
               </svg>
               View Public Dashboard
             </a>
-            <a href="#tip" class="inline-flex items-center gap-2 border-2 border-muted hover:border-primary text-primary font-semibold px-6 py-3 rounded-lg transition-colors">
+            <a href="#contact" class="inline-flex items-center gap-2 border-2 border-muted hover:border-primary text-primary font-semibold px-6 py-3 rounded-lg transition-colors">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M12 19V5M5 12l7-7 7 7"/>
               </svg>
@@ -170,7 +162,6 @@ import '../styles/global.css';
         </div>
       </div>
 
-      <!-- Live Status Indicator -->
       <div class="absolute bottom-8 right-8 hidden md:flex items-center gap-3 bg-surface-dark/80 backdrop-blur-sm border border-border rounded-lg px-4 py-3">
         <span class="relative flex h-3 w-3">
           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-success opacity-75"></span>
@@ -182,7 +173,6 @@ import '../styles/global.css';
         </div>
       </div>
 
-      <!-- Scroll Indicator (centered, clean stacking) -->
       <div class="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-primary/70">
         <span class="text-xs tracking-[0.3em] font-mono">SCROLL</span>
         <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -193,22 +183,18 @@ import '../styles/global.css';
 
     <!-- LIVE TRANSPARENCY DASHBOARD -->
     <section class="bg-surface-dark py-20 lg:py-28 relative overflow-hidden" id="dashboard">
-      <!-- Background accent -->
       <div class="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-radial from-accent/5 to-transparent" aria-hidden="true"></div>
       
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <!-- Section Header -->
         <div class="text-center max-w-2xl mx-auto mb-16">
-          <p class="font-mono text-accent text-sm tracking-[0.3em] mb-4">PUBLIC DATA</p>
+          <p class="font-mono text-accent text-sm tracking-[0.3em] mb-4 eyebrow-text">PUBLIC DATA</p>
           <h2 class="font-display text-4xl sm:text-5xl text-primary mb-6">TRANSPARENCY IN REAL TIME</h2>
           <p class="text-muted leading-relaxed">
             We believe public trust is built through openness. Our live dashboard gives you direct access to the metrics that matter—updated continuously, accessible to everyone.
           </p>
         </div>
 
-        <!-- Stats Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          <!-- Stat 1: Calls This Year -->
           <div class="bg-surface-mid border border-border rounded-xl p-6 hover:border-accent/50 transition-colors">
             <div class="flex items-center justify-between mb-4">
               <span class="text-muted text-sm font-medium">Calls This Year</span>
@@ -222,7 +208,6 @@ import '../styles/global.css';
             <p class="font-mono text-4xl text-primary font-semibold">12,847</p>
           </div>
 
-          <!-- Stat 2: Avg Response Time -->
           <div class="bg-surface-mid border border-border rounded-xl p-6 hover:border-accent/50 transition-colors">
             <div class="flex items-center justify-between mb-4">
               <span class="text-muted text-sm font-medium">Avg Response Time</span>
@@ -237,14 +222,12 @@ import '../styles/global.css';
             <p class="text-xs text-muted mt-1">minutes</p>
           </div>
 
-          <!-- Stat 3: Cases Cleared -->
           <div class="bg-surface-mid border border-border rounded-xl p-6 hover:border-accent/50 transition-colors">
             <div class="flex items-center justify-between mb-4">
               <span class="text-muted text-sm font-medium">Cases Cleared</span>
             </div>
             <div class="flex items-center gap-4">
               <p class="font-mono text-4xl text-primary font-semibold">78%</p>
-              <!-- Progress Ring -->
               <svg class="w-14 h-14" viewBox="0 0 48 48" aria-hidden="true">
                 <circle cx="24" cy="24" r="20" fill="none" stroke="#1e3a8a" stroke-width="4"/>
                 <circle cx="24" cy="24" r="20" fill="none" stroke="#60a5fa" stroke-width="4" 
@@ -254,7 +237,6 @@ import '../styles/global.css';
             </div>
           </div>
 
-          <!-- Stat 4: Officers on Duty -->
           <div class="bg-surface-mid border border-border rounded-xl p-6 hover:border-accent/50 transition-colors">
             <div class="flex items-center justify-between mb-4">
               <span class="text-muted text-sm font-medium">Officers on Duty Now</span>
@@ -268,11 +250,9 @@ import '../styles/global.css';
           </div>
         </div>
 
-        <!-- Horizontal Bar Chart: Calls by Type -->
         <div class="bg-surface-mid border border-border rounded-xl p-6 lg:p-8">
           <h3 class="text-lg font-semibold text-primary mb-6">Calls by Type — Year to Date</h3>
           <div class="space-y-4">
-            <!-- Welfare Checks -->
             <div class="flex items-center gap-4">
               <span class="w-28 text-sm text-muted shrink-0">Welfare Checks</span>
               <div class="flex-1 h-8 bg-base rounded overflow-hidden">
@@ -280,7 +260,6 @@ import '../styles/global.css';
               </div>
               <span class="font-mono text-sm text-primary w-16 text-right">3,241</span>
             </div>
-            <!-- Traffic -->
             <div class="flex items-center gap-4">
               <span class="w-28 text-sm text-muted shrink-0">Traffic</span>
               <div class="flex-1 h-8 bg-base rounded overflow-hidden">
@@ -288,7 +267,6 @@ import '../styles/global.css';
               </div>
               <span class="font-mono text-sm text-primary w-16 text-right">2,876</span>
             </div>
-            <!-- Domestic -->
             <div class="flex items-center gap-4">
               <span class="w-28 text-sm text-muted shrink-0">Domestic</span>
               <div class="flex-1 h-8 bg-base rounded overflow-hidden">
@@ -296,7 +274,6 @@ import '../styles/global.css';
               </div>
               <span class="font-mono text-sm text-primary w-16 text-right">1,892</span>
             </div>
-            <!-- Property -->
             <div class="flex items-center gap-4">
               <span class="w-28 text-sm text-muted shrink-0">Property</span>
               <div class="flex-1 h-8 bg-base rounded overflow-hidden">
@@ -304,7 +281,6 @@ import '../styles/global.css';
               </div>
               <span class="font-mono text-sm text-primary w-16 text-right">2,214</span>
             </div>
-            <!-- Other -->
             <div class="flex items-center gap-4">
               <span class="w-28 text-sm text-muted shrink-0">Other</span>
               <div class="flex-1 h-8 bg-base rounded overflow-hidden">
@@ -315,7 +291,6 @@ import '../styles/global.css';
           </div>
         </div>
 
-        <!-- Updated timestamp -->
         <div class="flex items-center justify-center gap-2 mt-8 text-muted text-sm">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
@@ -328,15 +303,12 @@ import '../styles/global.css';
     <!-- SERVICES GRID -->
     <section class="bg-base py-20 lg:py-28" id="services">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Section Header -->
         <div class="text-center max-w-2xl mx-auto mb-16">
-          <p class="font-mono text-accent text-sm tracking-[0.3em] mb-4">WHAT WE DO</p>
+          <p class="font-mono text-accent text-sm tracking-[0.3em] mb-4 eyebrow-text">WHAT WE DO</p>
           <h2 class="font-display text-4xl sm:text-5xl text-primary mb-6">SERVICES FOR EVERY RESIDENT</h2>
         </div>
 
-        <!-- Services Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Patrol & Response -->
           <div class="group bg-surface-dark border border-border rounded-xl p-6 hover:border-accent transition-colors">
             <div class="w-12 h-12 bg-surface-mid rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/10 transition-colors">
               <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -347,7 +319,6 @@ import '../styles/global.css';
             <p class="text-muted leading-relaxed">24/7 coverage across all 14 towns with rapid response times. Our deputies know every back road, trail, and community in Granite Ridge County.</p>
           </div>
 
-          <!-- Investigations -->
           <div class="group bg-surface-dark border border-border rounded-xl p-6 hover:border-accent transition-colors">
             <div class="w-12 h-12 bg-surface-mid rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/10 transition-colors">
               <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -360,7 +331,6 @@ import '../styles/global.css';
             <p class="text-muted leading-relaxed">Dedicated detective unit handling major crimes, fraud, and cold cases. We leverage modern forensics and inter-agency partnerships to solve cases.</p>
           </div>
 
-          <!-- Court Security -->
           <div class="group bg-surface-dark border border-border rounded-xl p-6 hover:border-accent transition-colors">
             <div class="w-12 h-12 bg-surface-mid rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/10 transition-colors">
               <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -373,7 +343,6 @@ import '../styles/global.css';
             <p class="text-muted leading-relaxed">Ensuring the safety of judicial proceedings at Granite Ridge Superior Court. Our bailiffs maintain order and protect all participants.</p>
           </div>
 
-          <!-- Civil Process Service -->
           <div class="group bg-surface-dark border border-border rounded-xl p-6 hover:border-accent transition-colors">
             <div class="w-12 h-12 bg-surface-mid rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/10 transition-colors">
               <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -384,7 +353,6 @@ import '../styles/global.css';
             <p class="text-muted leading-relaxed">Professional, timely delivery of legal documents including subpoenas, summons, and court orders throughout the county.</p>
           </div>
 
-          <!-- School Resource Officers -->
           <div class="group bg-surface-dark border border-border rounded-xl p-6 hover:border-accent transition-colors">
             <div class="w-12 h-12 bg-surface-mid rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/10 transition-colors">
               <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -397,7 +365,6 @@ import '../styles/global.css';
             <p class="text-muted leading-relaxed">Deputies assigned to local schools building relationships with students, conducting safety drills, and providing mentorship.</p>
           </div>
 
-          <!-- Community Outreach -->
           <div class="group bg-surface-dark border border-border rounded-xl p-6 hover:border-accent transition-colors">
             <div class="w-12 h-12 bg-surface-mid rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/10 transition-colors">
               <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -415,9 +382,8 @@ import '../styles/global.css';
     <section class="bg-gradient-to-b from-base to-surface-dark py-20 lg:py-28" id="transparency">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
-          <!-- Left Content (3 cols) -->
           <div class="lg:col-span-3">
-            <p class="font-mono text-accent text-sm tracking-[0.3em] mb-4">ACCOUNTABILITY</p>
+            <p class="font-mono text-accent text-sm tracking-[0.3em] mb-4 eyebrow-text">ACCOUNTABILITY</p>
             <h2 class="font-display text-4xl sm:text-5xl text-primary mb-6">PUBLIC RECORDS & ACCOUNTABILITY</h2>
             <p class="text-muted leading-relaxed mb-8">
               We believe every resident has the right to understand how their sheriff's office operates. Under Sheriff Marcus Whitfield's leadership, we've made transparency a core pillar of our department. All records requests are processed within 5 business days.
@@ -454,7 +420,7 @@ import '../styles/global.css';
                 <span class="text-primary">Full Budget Disclosure</span>
               </li>
             </ul>
-            <a href="#foia" class="inline-flex items-center gap-2 text-accent hover:text-accent/80 font-semibold transition-colors">
+            <a href="#contact" class="inline-flex items-center gap-2 text-accent hover:text-accent/80 font-semibold transition-colors">
               Submit a FOIA Request
               <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -462,16 +428,11 @@ import '../styles/global.css';
             </a>
           </div>
 
-          <!-- Right: Document Mockup (2 cols) -->
           <div class="lg:col-span-2 relative">
             <div class="relative">
-              <!-- Back document -->
               <div class="absolute -top-4 -left-4 w-full h-80 bg-surface-mid border border-border rounded-xl transform rotate-3" aria-hidden="true"></div>
-              <!-- Middle document -->
               <div class="absolute -top-2 -left-2 w-full h-80 bg-surface-mid border border-border rounded-xl transform rotate-1" aria-hidden="true"></div>
-              <!-- Front document -->
               <div class="relative w-full bg-surface-mid border border-border rounded-xl p-6 shadow-2xl">
-                <!-- PDF Header -->
                 <div class="flex items-center gap-3 mb-4 pb-4 border-b border-border">
                   <svg class="w-8 h-8 text-alert" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm4 18H6V4h7v5h5v11z"/>
@@ -482,7 +443,6 @@ import '../styles/global.css';
                     <p class="text-xs text-muted">PDF • 2.4 MB</p>
                   </div>
                 </div>
-                <!-- Document preview lines -->
                 <div class="space-y-3">
                   <div class="h-3 bg-base rounded w-full" aria-hidden="true"></div>
                   <div class="h-3 bg-base rounded w-5/6" aria-hidden="true"></div>
@@ -490,7 +450,6 @@ import '../styles/global.css';
                   <div class="h-3 bg-base rounded w-full" aria-hidden="true"></div>
                   <div class="h-3 bg-base rounded w-3/4" aria-hidden="true"></div>
                 </div>
-                <!-- Badge watermark -->
                 <div class="absolute bottom-6 right-6 opacity-10">
                   <svg class="w-20 h-20 text-gold" viewBox="0 0 80 80" fill="currentColor" aria-hidden="true">
                     <polygon points="40,4 48,28 76,28 54,44 62,72 40,56 18,72 26,44 4,28 32,28"/>
@@ -506,61 +465,55 @@ import '../styles/global.css';
     <!-- COMMUNITY PROGRAMS -->
     <section class="bg-base py-20 lg:py-28" id="community">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Section Header -->
         <div class="text-center max-w-2xl mx-auto mb-16">
-          <p class="font-mono text-gold text-sm tracking-[0.3em] mb-4">BEYOND ENFORCEMENT</p>
+          <p class="font-mono text-gold text-sm tracking-[0.3em] mb-4 eyebrow-text">BEYOND ENFORCEMENT</p>
           <h2 class="font-display text-4xl sm:text-5xl text-primary mb-6">BUILDING TRUST THROUGH ACTION</h2>
           <p class="text-muted leading-relaxed">
             Real community safety comes from connection, not just enforcement. These programs help us know our neighbors and build lasting trust.
           </p>
         </div>
 
-        <!-- Program Cards -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- Coffee with a Cop -->
           <div class="bg-surface-dark border border-border rounded-xl p-6 hover:border-gold/50 transition-colors text-center">
             <div class="w-16 h-16 mx-auto bg-gold/10 rounded-full flex items-center justify-center mb-4">
               <span class="text-3xl" role="img" aria-hidden="true">☕</span>
             </div>
             <h3 class="text-lg font-semibold text-primary mb-2">Coffee with a Cop</h3>
             <p class="text-sm text-muted mb-4 leading-relaxed">Monthly informal meetups at local cafes. No agenda—just conversation and connection.</p>
-            <a href="#coffee" class="text-gold hover:text-gold/80 text-sm font-medium transition-colors">
+            <a href="#contact" class="text-gold hover:text-gold/80 text-sm font-medium transition-colors">
               Learn more →
             </a>
           </div>
 
-          <!-- Citizens Academy -->
           <div class="bg-surface-dark border border-border rounded-xl p-6 hover:border-gold/50 transition-colors text-center">
             <div class="w-16 h-16 mx-auto bg-gold/10 rounded-full flex items-center justify-center mb-4">
               <span class="text-3xl" role="img" aria-hidden="true">🎓</span>
             </div>
             <h3 class="text-lg font-semibold text-primary mb-2">Citizens Academy</h3>
             <p class="text-sm text-muted mb-4 leading-relaxed">10-week program giving residents an inside look at law enforcement operations.</p>
-            <a href="#academy" class="text-gold hover:text-gold/80 text-sm font-medium transition-colors">
+            <a href="#contact" class="text-gold hover:text-gold/80 text-sm font-medium transition-colors">
               Learn more →
             </a>
           </div>
 
-          <!-- School Safety Program -->
           <div class="bg-surface-dark border border-border rounded-xl p-6 hover:border-gold/50 transition-colors text-center">
             <div class="w-16 h-16 mx-auto bg-gold/10 rounded-full flex items-center justify-center mb-4">
               <span class="text-3xl" role="img" aria-hidden="true">🏫</span>
             </div>
             <h3 class="text-lg font-semibold text-primary mb-2">School Safety Program</h3>
             <p class="text-sm text-muted mb-4 leading-relaxed">SROs in every school, safety drills, and anti-bullying education for students.</p>
-            <a href="#schools" class="text-gold hover:text-gold/80 text-sm font-medium transition-colors">
+            <a href="#contact" class="text-gold hover:text-gold/80 text-sm font-medium transition-colors">
               Learn more →
             </a>
           </div>
 
-          <!-- Senior Wellness Checks -->
           <div class="bg-surface-dark border border-border rounded-xl p-6 hover:border-gold/50 transition-colors text-center">
             <div class="w-16 h-16 mx-auto bg-gold/10 rounded-full flex items-center justify-center mb-4">
               <span class="text-3xl" role="img" aria-hidden="true">❤️</span>
             </div>
             <h3 class="text-lg font-semibold text-primary mb-2">Senior Wellness Checks</h3>
             <p class="text-sm text-muted mb-4 leading-relaxed">Weekly check-ins on elderly residents living alone. Safety and companionship.</p>
-            <a href="#seniors" class="text-gold hover:text-gold/80 text-sm font-medium transition-colors">
+            <a href="#contact" class="text-gold hover:text-gold/80 text-sm font-medium transition-colors">
               Learn more →
             </a>
           </div>
@@ -570,7 +523,6 @@ import '../styles/global.css';
 
     <!-- RECRUITMENT CTA -->
     <section class="relative overflow-hidden py-20 lg:py-28" id="recruitment">
-      <!-- Background with glow -->
       <div class="absolute inset-0 bg-surface-dark">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/5 rounded-full blur-3xl" aria-hidden="true"></div>
       </div>
@@ -578,12 +530,12 @@ import '../styles/global.css';
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10">
           <div class="lg:max-w-2xl">
-            <p class="font-mono text-accent text-sm tracking-[0.3em] mb-4">JOIN OUR TEAM</p>
+            <p class="font-mono text-accent text-sm tracking-[0.3em] mb-4 eyebrow-text">JOIN OUR TEAM</p>
             <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl text-primary mb-6">NOW HIRING DEPUTIES</h2>
             <p class="text-xl text-muted mb-4">
               Starting salary <span class="text-primary font-semibold">$58,000</span> • Comprehensive benefits • Take-home cruiser • Tuition reimbursement
             </p>
-            <a href="#careers" class="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-base font-semibold px-8 py-4 rounded-lg transition-all hover:shadow-xl hover:shadow-accent/20 text-lg">
+            <a href="#contact" class="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-base font-semibold px-8 py-4 rounded-lg transition-all hover:shadow-xl hover:shadow-accent/20 text-lg">
               View Open Positions
               <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -591,13 +543,11 @@ import '../styles/global.css';
             </a>
           </div>
 
-          <!-- Stats callout -->
           <div class="bg-surface-mid border border-border rounded-xl p-8 text-center">
             <p class="font-mono text-5xl lg:text-6xl text-accent font-bold mb-2">47</p>
             <p class="text-primary font-semibold mb-1">deputies serving</p>
             <p class="text-4xl lg:text-5xl font-display text-primary mb-2">38,000</p>
             <p class="text-muted">residents</p>
-            <!-- Small flag -->
             <div class="mt-6 flex justify-center">
               <svg class="w-12 h-8" viewBox="0 0 60 40" aria-hidden="true">
                 <rect width="60" height="40" fill="#bf0a30"/>
@@ -620,7 +570,6 @@ import '../styles/global.css';
   <footer class="bg-footer py-16" id="contact">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16 mb-12">
-        <!-- Column 1: Logo & Social -->
         <div>
           <div class="flex items-center gap-3 mb-6">
             <svg class="w-10 h-10 text-gold" viewBox="0 0 80 80" fill="none" aria-hidden="true">
@@ -636,24 +585,23 @@ import '../styles/global.css';
           <p class="text-muted text-sm mb-6 leading-relaxed">
             Protecting the North Country since 1847. Committed to transparency, community, and modern law enforcement.
           </p>
-          <!-- Social Icons -->
           <div class="flex items-center gap-4">
-            <a href="#facebook" class="w-10 h-10 bg-surface-mid hover:bg-accent/20 rounded-lg flex items-center justify-center text-muted hover:text-accent transition-colors" aria-label="Facebook">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-surface-mid hover:bg-accent/20 rounded-lg flex items-center justify-center text-muted hover:text-accent transition-colors" aria-label="Facebook">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
               </svg>
             </a>
-            <a href="#twitter" class="w-10 h-10 bg-surface-mid hover:bg-accent/20 rounded-lg flex items-center justify-center text-muted hover:text-accent transition-colors" aria-label="X (Twitter)">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-surface-mid hover:bg-accent/20 rounded-lg flex items-center justify-center text-muted hover:text-accent transition-colors" aria-label="X (Twitter)">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
               </svg>
             </a>
-            <a href="#instagram" class="w-10 h-10 bg-surface-mid hover:bg-accent/20 rounded-lg flex items-center justify-center text-muted hover:text-accent transition-colors" aria-label="Instagram">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-surface-mid hover:bg-accent/20 rounded-lg flex items-center justify-center text-muted hover:text-accent transition-colors" aria-label="Instagram">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/>
               </svg>
             </a>
-            <a href="#youtube" class="w-10 h-10 bg-surface-mid hover:bg-accent/20 rounded-lg flex items-center justify-center text-muted hover:text-accent transition-colors" aria-label="YouTube">
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-surface-mid hover:bg-accent/20 rounded-lg flex items-center justify-center text-muted hover:text-accent transition-colors" aria-label="YouTube">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
               </svg>
@@ -661,7 +609,6 @@ import '../styles/global.css';
           </div>
         </div>
 
-        <!-- Column 2: Contact Info -->
         <div>
           <h3 class="font-semibold text-primary mb-6">Contact</h3>
           <address class="not-italic space-y-4 text-sm">
@@ -687,7 +634,6 @@ import '../styles/global.css';
           </address>
         </div>
 
-        <!-- Column 3: Quick Links -->
         <div>
           <h3 class="font-semibold text-primary mb-6">Quick Links</h3>
           <ul class="space-y-3 text-sm">
@@ -697,8 +643,8 @@ import '../styles/global.css';
             <li><a href="#community" class="text-muted hover:text-accent transition-colors">Community Programs</a></li>
             <li><a href="#recruitment" class="text-muted hover:text-accent transition-colors">Recruitment</a></li>
             <li><a href="#contact" class="text-muted hover:text-accent transition-colors">Contact</a></li>
-            <li><a href="#pay" class="text-muted hover:text-accent transition-colors">Pay a Fine</a></li>
-            <li><a href="#foia" class="text-muted hover:text-accent transition-colors">FOIA Request</a></li>
+            <li><a href="#contact" class="text-muted hover:text-accent transition-colors">Pay a Fine</a></li>
+            <li><a href="#contact" class="text-muted hover:text-accent transition-colors">FOIA Request</a></li>
           </ul>
         </div>
       </div>
@@ -708,8 +654,8 @@ import '../styles/global.css';
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-xs text-muted">
           <p>© 2025 Granite Ridge County Sheriff's Office. All rights reserved.</p>
           <div class="flex flex-wrap items-center gap-4 md:gap-6">
-            <a href="#accessibility" class="hover:text-accent transition-colors">Accessibility Statement</a>
-            <span class="hidden md:inline text-border">|</span>
+            <a href="#contact" class="hover:text-accent transition-colors">Accessibility Statement</a>
+            <span class="hidden md:inline footer-sep" aria-hidden="true">|</span>
             <div class="flex items-center gap-2">
               <svg class="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                 <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm0 14a6 6 0 110-12 6 6 0 010 12z"/>
@@ -717,17 +663,15 @@ import '../styles/global.css';
               </svg>
               <span>Equal Opportunity Employer</span>
             </div>
-            <span class="hidden md:inline text-border">|</span>
-            <a href="#sitemap" class="hover:text-accent transition-colors">Sitemap</a>
+            <span class="hidden md:inline footer-sep" aria-hidden="true">|</span>
+            <a href="#contact" class="hover:text-accent transition-colors">Sitemap</a>
           </div>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Mobile Menu + Auto-Hide Header Script -->
   <script>
-    // Mobile menu toggle
     const menuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     
@@ -735,24 +679,21 @@ import '../styles/global.css';
       mobileMenu?.classList.toggle('hidden');
     });
 
-    // Close mobile menu when clicking a link
     mobileMenu?.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
       });
     });
 
-    // Auto-hide navbar on scroll down, reveal on scroll up
     const header = document.getElementById('main-header');
     let lastScrollY = window.scrollY;
     let ticking = false;
-    const scrollThreshold = 5; // ignore micro-scrolls smaller than this
+    const scrollThreshold = 5;
 
     function handleScroll() {
       const currentScrollY = window.scrollY;
       const scrollDelta = currentScrollY - lastScrollY;
 
-      // Always show header at top of page
       if (currentScrollY < 100) {
         header?.classList.remove('nav-hidden');
         lastScrollY = currentScrollY;
@@ -760,19 +701,15 @@ import '../styles/global.css';
         return;
       }
 
-      // Ignore tiny scrolls
       if (Math.abs(scrollDelta) < scrollThreshold) {
         ticking = false;
         return;
       }
 
       if (scrollDelta > 0) {
-        // Scrolling DOWN — hide header
         header?.classList.add('nav-hidden');
-        // Also close mobile menu if open
         mobileMenu?.classList.add('hidden');
       } else {
-        // Scrolling UP — show header
         header?.classList.remove('nav-hidden');
       }
 
@@ -789,7 +726,6 @@ import '../styles/global.css';
   </script>
 
   <style>
-    /* Custom Properties for Color Palette */
     :root {
       --color-base: #0a0e1a;
       --color-surface-dark: #0f1d3d;
@@ -804,12 +740,20 @@ import '../styles/global.css';
       --color-footer: #050811;
     }
 
-    /* Auto-hide navbar — slides up off-screen when scrolling down */
     #main-header.nav-hidden {
       transform: translateY(-100%);
     }
 
-    /* Tailwind-style utility classes using custom properties */
+    /* Footer separator pipes — use muted color so they pass contrast on dark footer */
+    .footer-sep {
+      color: var(--color-muted);
+    }
+
+    /* Eyebrow labels — give them slightly more weight visually but keep them as paragraphs */
+    .eyebrow-text {
+      /* visual styling inherited from utility classes */
+    }
+
     .bg-base { background-color: var(--color-base); }
     .bg-surface-dark { background-color: var(--color-surface-dark); }
     .bg-surface-mid { background-color: var(--color-surface-mid); }
@@ -836,7 +780,6 @@ import '../styles/global.css';
     .border-gold\/50 { border-color: rgb(212 160 23 / 0.5); }
     .border-accent\/50 { border-color: rgb(96 165 250 / 0.5); }
 
-    /* Hover states */
     .hover\:border-accent:hover { border-color: var(--color-accent); }
     .hover\:border-gold\/50:hover { border-color: rgb(212 160 23 / 0.5); }
     .hover\:border-accent\/50:hover { border-color: rgb(96 165 250 / 0.5); }
@@ -852,27 +795,22 @@ import '../styles/global.css';
     .group:hover .group-hover\:bg-accent\/10 { background-color: rgb(96 165 250 / 0.1); }
     .group:hover .group-hover\:scale-105 { transform: scale(1.05); }
 
-    /* Shadow utilities */
     .hover\:shadow-accent\/20:hover { --tw-shadow-color: rgb(96 165 250 / 0.2); }
     
-    /* Background with alpha */
     .bg-base\/75 { background-color: rgb(10 14 26 / 0.75); }
     .bg-base\/80 { background-color: rgb(10 14 26 / 0.8); }
     .bg-surface-dark\/80 { background-color: rgb(15 29 61 / 0.8); }
 
-    /* Typography */
     .font-display { font-family: 'Bebas Neue', 'Oswald', sans-serif; }
     .font-mono { font-family: 'JetBrains Mono', monospace; }
     body { font-family: 'Inter', sans-serif; }
 
-    /* Radial gradient */
     .bg-gradient-radial {
       background: radial-gradient(circle at center, var(--tw-gradient-from), var(--tw-gradient-to));
     }
     .from-accent\/5 { --tw-gradient-from: rgb(96 165 250 / 0.05); }
     .to-transparent { --tw-gradient-to: transparent; }
 
-    /* Animations */
     @keyframes ping {
       75%, 100% {
         transform: scale(2);
@@ -897,31 +835,31 @@ import '../styles/global.css';
       animation: bounce 1s infinite;
     }
 
-    /* Scroll smooth */
     .scroll-smooth {
       scroll-behavior: smooth;
     }
 
-    /* Focus states for accessibility */
     a:focus-visible,
     button:focus-visible {
       outline: 2px solid var(--color-accent);
       outline-offset: 2px;
     }
 
-    /* Selection */
     ::selection {
       background-color: var(--color-accent);
       color: var(--color-base);
     }
 
-    /* Respect reduced motion preference */
     @media (prefers-reduced-motion: reduce) {
       #main-header {
         transition: none;
       }
       #main-header.nav-hidden {
         transform: none;
+      }
+      .animate-ping,
+      .animate-bounce {
+        animation: none;
       }
     }
   </style>
