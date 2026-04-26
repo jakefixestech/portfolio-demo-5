@@ -619,14 +619,14 @@ import '../styles/global.css';
             </p>
             <div>
               <p class="text-muted">
-                <span class="text-alert font-medium">Emergency:</span> <a href="tel:911" class="text-primary hover:text-accent transition-colors">911</a>
+                <span class="text-alert font-medium">Emergency:</span> <a href="tel:911" class="text-primary hover:text-accent transition-colors footer-link">911</a>
               </p>
               <p class="text-muted">
-                <span class="text-muted font-medium">Non-Emergency:</span> <a href="tel:6035552400" class="text-primary hover:text-accent transition-colors">(603) 555-2400</a>
+                <span class="text-muted font-medium">Non-Emergency:</span> <a href="tel:6035552400" class="text-primary hover:text-accent transition-colors footer-link">(603) 555-2400</a>
               </p>
             </div>
             <p class="text-muted">
-              <a href="mailto:info@graniteridgeso.gov" class="text-primary hover:text-accent transition-colors">info@graniteridgeso.gov</a>
+              <a href="mailto:info@graniteridgeso.gov" class="text-primary hover:text-accent transition-colors footer-link">info@graniteridgeso.gov</a>
             </p>
             <p class="text-muted">
               <span class="font-medium text-primary">Hours:</span> Admin Office M-F 8am-5pm<br/>
@@ -748,6 +748,13 @@ import '../styles/global.css';
     /* Footer separator pipes — use muted color so they pass contrast on dark footer */
     .footer-sep {
       color: var(--color-muted);
+    }
+
+    /* Footer contact links — underlined so they're distinguishable beyond color */
+    .footer-link {
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+      text-decoration-thickness: 1px;
     }
 
     /* Eyebrow labels — give them slightly more weight visually but keep them as paragraphs */
