@@ -1,55 +1,36 @@
-# robots.txt for Moonstone & Sage demo
-
-
-# Allow all crawlers full access
+# robots.txt for Demo 5 
 User-agent: *
-Allow: /
+Disallow:
 
-
-# Explicitly allow social media crawlers (for OG image previews)
 User-agent: facebookexternalhit
-Allow: /
-
+Disallow:
 
 User-agent: facebookcatalog
-Allow: /
-
+Disallow:
 
 User-agent: Facebot
-Allow: /
-
+Disallow:
 
 User-agent: Twitterbot
-Allow: /
-
+Disallow:
 
 User-agent: LinkedInBot
-Allow: /
-
+Disallow:
 
 User-agent: Slackbot
-Allow: /
-
+Disallow:
 
 User-agent: Slackbot-LinkExpanding
-Allow: /
-
+Disallow:
 
 User-agent: Discordbot
-Allow: /
-
+Disallow:
 
 User-agent: TelegramBot
-Allow: /
-
+Disallow:
 
 User-agent: WhatsApp
-Allow: /
-
+Disallow:
 
 User-agent: Applebot
-Allow: /
-
-
-# Sitemap location (update if you add one later)
-# Sitemap: https://demo4.jakefixestech.com/sitemap.xml
+Disallow:
