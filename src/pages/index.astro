@@ -21,15 +21,15 @@ import '../styles/global.css';
 </head>
 <body class="bg-base text-primary antialiased">
   
-  <!-- EMERGENCY BAR -->
-  <div class="sticky top-0 z-50 bg-gradient-to-r from-alert via-orange-600 to-alert py-2 px-4 text-center">
+  <!-- EMERGENCY BAR (scrolls away with page) -->
+  <div class="relative z-50 bg-gradient-to-r from-alert via-orange-600 to-alert py-2 px-4 text-center" id="emergency-bar">
     <p class="text-sm md:text-base font-semibold text-white tracking-wide">
       <span aria-hidden="true">🚨</span> EMERGENCY: DIAL <a href="tel:911" class="underline underline-offset-2 hover:no-underline">911</a> — Non-Emergency: <a href="tel:6035552400" class="underline underline-offset-2 hover:no-underline">(603) 555-2400</a>
     </p>
   </div>
 
-  <!-- NAVIGATION -->
-  <header class="sticky top-[40px] z-40 bg-base/80 backdrop-blur-xl border-b border-border/50">
+  <!-- NAVIGATION (auto-hides on scroll down, reveals on scroll up) -->
+  <header id="main-header" class="sticky top-0 z-40 bg-base/80 backdrop-blur-xl border-b border-border/50 transition-transform duration-300 ease-in-out">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
       <!-- Logo Badge -->
       <a href="/" class="flex items-center gap-3 group" aria-label="Granite Ridge County Sheriff's Office Home">
@@ -108,15 +108,6 @@ import '../styles/global.css';
           <source src="/hero.mp4" type="video/mp4" />
         </video>
         <div class="absolute inset-0 bg-base/75"></div>
-        <!-- Topographic pattern overlay -->
-        <svg class="absolute inset-0 w-full h-full opacity-5" aria-hidden="true">
-          <pattern id="topo" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-            <path d="M0 50 Q25 30 50 50 T100 50" fill="none" stroke="#60a5fa" stroke-width="0.5"/>
-            <path d="M0 60 Q25 40 50 60 T100 60" fill="none" stroke="#60a5fa" stroke-width="0.5"/>
-            <path d="M0 70 Q25 50 50 70 T100 70" fill="none" stroke="#60a5fa" stroke-width="0.5"/>
-          </pattern>
-          <rect width="100%" height="100%" fill="url(#topo)"/>
-        </svg>
       </div>
 
       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-40">
@@ -169,10 +160,10 @@ import '../styles/global.css';
         </div>
       </div>
 
-      <!-- Scroll Indicator -->
-      <div class="absolute bottom-8 left-8 hidden md:flex flex-col items-center gap-2 text-muted">
-        <span class="text-xs tracking-widest rotate-90 origin-center translate-y-8">SCROLL</span>
-        <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <!-- Scroll Indicator (centered, clean stacking) -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-primary/70">
+        <span class="text-xs tracking-[0.3em] font-mono">SCROLL</span>
+        <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <path d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
         </svg>
       </div>
@@ -712,8 +703,9 @@ import '../styles/global.css';
     </div>
   </footer>
 
-  <!-- Mobile Menu Script -->
+  <!-- Mobile Menu + Auto-Hide Header Script -->
   <script>
+    // Mobile menu toggle
     const menuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     
@@ -727,6 +719,51 @@ import '../styles/global.css';
         mobileMenu.classList.add('hidden');
       });
     });
+
+    // Auto-hide navbar on scroll down, reveal on scroll up
+    const header = document.getElementById('main-header');
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    const scrollThreshold = 5; // ignore micro-scrolls smaller than this
+
+    function handleScroll() {
+      const currentScrollY = window.scrollY;
+      const scrollDelta = currentScrollY - lastScrollY;
+
+      // Always show header at top of page
+      if (currentScrollY < 100) {
+        header?.classList.remove('nav-hidden');
+        lastScrollY = currentScrollY;
+        ticking = false;
+        return;
+      }
+
+      // Ignore tiny scrolls
+      if (Math.abs(scrollDelta) < scrollThreshold) {
+        ticking = false;
+        return;
+      }
+
+      if (scrollDelta > 0) {
+        // Scrolling DOWN — hide header
+        header?.classList.add('nav-hidden');
+        // Also close mobile menu if open
+        mobileMenu?.classList.add('hidden');
+      } else {
+        // Scrolling UP — show header
+        header?.classList.remove('nav-hidden');
+      }
+
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(handleScroll);
+        ticking = true;
+      }
+    }, { passive: true });
   </script>
 
   <style>
@@ -743,6 +780,11 @@ import '../styles/global.css';
       --color-success: #10b981;
       --color-alert: #ef4444;
       --color-footer: #050811;
+    }
+
+    /* Auto-hide navbar — slides up off-screen when scrolling down */
+    #main-header.nav-hidden {
+      transform: translateY(-100%);
     }
 
     /* Tailwind-style utility classes using custom properties */
@@ -849,6 +891,16 @@ import '../styles/global.css';
     ::selection {
       background-color: var(--color-accent);
       color: var(--color-base);
+    }
+
+    /* Respect reduced motion preference */
+    @media (prefers-reduced-motion: reduce) {
+      #main-header {
+        transition: none;
+      }
+      #main-header.nav-hidden {
+        transform: none;
+      }
     }
   </style>
 </body>
